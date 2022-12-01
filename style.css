@@ -1,0 +1,116 @@
+:root{
+    --main-color:#111;
+    --main-color-alt:#000;
+    --bg-color:#222;
+    --font:#fff;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--font);
+    font-family:system-ui;
+}
+.crud{
+width: 80%;
+margin: 20px auto;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+input,small{
+    width: 100%;
+    height: 27px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 4px;
+    color: var(--font);
+}
+input:focus{
+    background-color: var(--main-color-alt);
+    transform: scale(1.015);
+}
+.price{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+}
+@media screen and (min-width:991px) {
+    .price{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+.price input{
+    width: 90%;
+    margin: 5px;
+}
+.price input:last-child{
+    margin-right: 0;
+}
+.price input:first-child{
+    margin-left: 0;
+}
+.price small{
+    text-align: end;
+    /* width: 100px; */
+    line-height: 1.9;
+    background-color: rgb(158, 58, 58);
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-size: 14px;
+    position: relative;
+}
+.price small::before{
+    content: "total:";
+    position: absolute;
+    left: 5px;
+}
+button{
+    width: 100%;
+    height: 27px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(57, 151, 65);
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4px 0;
+    color:var(--font);
+    transition: 0.3s;
+    
+}
+button:hover{
+    background-color: rgba(40, 146, 49, 0.856);;
+    letter-spacing: 1px;
+}
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#deleteAll{
+    margin: 20px auto;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+table th {
+    text-transform: uppercase;
+}
+th,td{
+    padding: 5px;
+}
+#search{
+    display: none;
+}
